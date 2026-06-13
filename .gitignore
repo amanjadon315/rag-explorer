@@ -1,0 +1,16 @@
+# Python
+backend/.venv/
+backend/backend_venv/
+backend/__pycache__/
+backend/app/__pycache__/
+backend/**/__pycache__/
+backend/data/
+backend/rag_explorer.db
+backend/.env
+
+# Node
+frontend/node_modules/
+
+# Misc
+.env
+*.tar.gz

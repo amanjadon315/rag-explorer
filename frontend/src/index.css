@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { box-sizing: border-box; }
+  body { background: #030712; color: #f9fafb; font-family: 'JetBrains Mono', monospace; }
+
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: #111827; }
+  ::-webkit-scrollbar-thumb { background: #374151; border-radius: 3px; }
+  ::-webkit-scrollbar-thumb:hover { background: #4b5563; }
+}
+
+@layer components {
+  .card {
+    @apply bg-gray-900 border border-gray-800 rounded-xl p-4;
+  }
+  .card-header {
+    @apply text-xs font-mono text-gray-400 uppercase tracking-widest mb-3 flex items-center gap-2;
+  }
+  .stage-dot {
+    @apply w-2 h-2 rounded-full;
+  }
+  .metric-chip {
+    @apply inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md text-xs font-mono
+           bg-gray-800 border border-gray-700 text-gray-300;
+  }
+  .btn {
+    @apply px-3 py-1.5 rounded-lg text-xs font-mono transition-all cursor-pointer;
+  }
+  .btn-primary {
+    @apply btn bg-emerald-600 hover:bg-emerald-500 text-white border border-emerald-500;
+  }
+  .btn-secondary {
+    @apply btn bg-gray-800 hover:bg-gray-700 text-gray-300 border border-gray-700;
+  }
+  .code-block {
+    @apply bg-gray-950 border border-gray-800 rounded-lg p-3 text-xs font-mono
+           text-gray-300 overflow-x-auto whitespace-pre-wrap;
+  }
+  .param-label {
+    @apply text-xs font-mono text-gray-500;
+  }
+  .status-idle    { @apply text-gray-500; }
+  .status-running { @apply text-yellow-400 animate-pulse; }
+  .status-done    { @apply text-emerald-400; }
+  .status-error   { @apply text-red-400; }
+}
